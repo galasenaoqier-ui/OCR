@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "殷契拾文",
+    "slug": "yinqi-shiwen",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "jsEngine": "hermes",
+    "assetBundlePatterns": ["assets/**/*"],
+    "android": {
+      "package": "cn.yinqi.shiwen",
+      "minSdkVersion": 29,
+      "adaptiveIcon": {
+        "backgroundColor": "#211F1A"
+      },
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-image-picker",
+      "expo-sqlite"
+    ]
+  }
+}

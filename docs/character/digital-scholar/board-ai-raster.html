@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>殷契拾文 · 甲骨文数字史官 AI 位图模板（待生成）</title>
+  <style>
+    :root {
+      --ink: #111a19;
+      --deep: #1c2927;
+      --paper: #f3efe4;
+      --paper-soft: #e9e2d2;
+      --bronze: #b99656;
+      --bronze-soft: #d0af70;
+      --muted: #a9a297;
+      --line: #3a4a47;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse 70% 48% at 16% -8%, rgba(52, 74, 69, 0.7), transparent 62%),
+        linear-gradient(150deg, #0d1413 0%, #15201e 55%, #0f1615 100%);
+      color: var(--paper);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    }
+    .wrap { max-width: 1480px; margin: 0 auto; padding: 44px 34px 52px; }
+    header { border-bottom: 1px solid rgba(185, 150, 86, 0.38); padding-bottom: 24px; }
+    .eyebrow {
+      color: var(--bronze);
+      letter-spacing: 0.32em;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: "Songti SC", "STSong", "SimSun", serif;
+      font-weight: 500;
+      margin: 12px 0 6px;
+      font-size: clamp(28px, 4vw, 48px);
+      letter-spacing: 0.04em;
+    }
+    h1 em { color: var(--bronze-soft); font-style: normal; }
+    .lead { color: var(--muted); font-size: 14px; line-height: 1.9; margin: 8px 0 0; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 16px; color: var(--muted); font-size: 12px; }
+    .meta b { color: var(--paper); font-weight: 500; }
+
+    section { margin-top: 38px; }
+    .sec-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; }
+    .sec-no { color: var(--bronze); font-family: "Songti SC", serif; letter-spacing: 0.1em; }
+    h2 { font-family: "Songti SC", "STSong", serif; font-weight: 500; font-size: 22px; margin: 0; }
+    .sec-head small { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .card {
+      position: relative;
+      border: 1px solid rgba(185, 150, 86, 0.28);
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.035);
+      min-height: 0;
+    }
+    .stage { position: relative; aspect-ratio: 2 / 3; background: #0b1110; }
+    .stage.wide { aspect-ratio: 3 / 2; }
+    .stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ph {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; color: var(--muted); text-align: center;
+      font-size: 12px; letter-spacing: 0.12em; padding: 18px;
+      background:
+        repeating-linear-gradient(0deg, rgba(185, 150, 86, 0.05) 0 1px, transparent 1px 5px),
+        radial-gradient(circle at 50% 42%, rgba(185, 150, 86, 0.12), transparent 42%);
+    }
+    .ph::before { content: "待生成"; font-family: "Songti SC", serif; font-size: 18px; color: var(--bronze-soft); }
+    .cap {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      padding: 9px 11px; border-top: 1px solid rgba(185, 150, 86, 0.2);
+      background: rgba(20, 30, 28, 0.85);
+    }
+    .cap .en { color: var(--bronze); letter-spacing: 0.14em; font-size: 9px; text-transform: uppercase; }
+    .cap .cn { font-size: 13px; }
+    .badge { font-size: 10px; border: 1px solid rgba(185, 150, 86, 0.5); color: var(--bronze-soft); padding: 2px 7px; border-radius: 999px; }
+    .card.missing .badge { border-color: rgba(169, 169, 169, 0.4); color: var(--muted); }
+    .card.missing img { display: none; }
+
+    .spec { display: grid; grid-template-columns: 1.25fr 0.75fr 1fr; gap: 18px; }
+    .panel {
+      border: 1px solid rgba(185, 150, 86, 0.24);
+      background: rgba(255, 255, 255, 0.035);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .panel h3 { margin: 0 0 12px; font-family: "Songti SC", serif; font-weight: 500; color: var(--bronze-soft); font-size: 15px; }
+    .panel ul { margin: 0; padding-left: 18px; color: #d4d0c5; line-height: 2; font-size: 13px; }
+    .panel li b { color: var(--paper); font-weight: 500; }
+    .swatches { display: flex; gap: 12px; margin-top: 6px; }
+    .sw { flex: 1; text-align: center; font-size: 10px; color: var(--muted); }
+    .dot { height: 44px; border-radius: 8px; margin-bottom: 7px; border: 1px solid rgba(255, 255, 255, 0.12); }
+    .note { margin-top: 26px; padding: 14px 18px; border-left: 2px solid var(--bronze); background: rgba(185, 150, 86, 0.08); color: var(--muted); font-size: 12px; line-height: 1.9; }
+    footer { margin-top: 30px; padding-top: 14px; border-top: 1px solid rgba(185, 150, 86, 0.2); color: var(--muted); font-size: 11px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+    @media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, 1fr); } .spec { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .wrap { padding: 26px 16px 32px; } .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Digital Humanities · Oracle Bone Script · AI</div>
+      <h1>殷契拾文 · <em>甲骨文数字史官</em> Concept Sheet</h1>
+      <p class="lead">
+        数字人文项目核心虚拟角色设定 · 古文字数字讲解员 / AI 甲骨文知识助手。
+        原始设定稿与逐图提示词见同目录 character-brief.md 与 prompts.md。
+      </p>
+      <div class="meta">
+        <span><b>角色：</b>甲骨文数字史官</span>
+        <span><b>气质：</b>博学 · 沉稳 · 克制 · 温润</span>
+        <span><b>媒介：</b>gpt-image-2 · PBR · 电影级光影概念稿</span>
+        <span><b>状态：</b><span id="done-count">0</span> / 8 视角</span>
+      </div>
+    </header>
+
+    <section>
+      <div class="sec-head">
+        <span class="sec-no">Ⅰ</span>
+        <h2>多视角角色展示</h2>
+        <small>正面 / 45° / 侧面 / 背面 / 半身 / 持牌 / 讲解 / 表情</small>
+      </div>
+      <div class="grid" id="view-grid"></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">Ⅱ</span><h2>角色要点</h2></div>
+      <div class="spec">
+        <div class="panel">
+          <h3>身份与形象</h3>
+          <ul>
+            <li><b>年龄：</b>约 25 岁东方男性学者</li>
+            <li><b>形象：</b>清俊不网红、眼神深邃有“神”</li>
+            <li><b>气质：</b>长期研究古文字的历史学者感</li>
+            <li><b>排除：</b>仙侠、玄幻、偶像浓妆、网红古装</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>主色板</h3>
+          <div class="swatches">
+            <div class="sw"><div class="dot" style="background:#111A19"></div>玄黑</div>
+            <div class="sw"><div class="dot" style="background:#4B5A54"></div>青铜灰</div>
+            <div class="sw"><div class="dot" style="background:#B99656"></div>暗金</div>
+            <div class="sw"><div class="dot" style="background:#E7DFC9"></div>米白</div>
+            <div class="sw"><div class="dot" style="background:#6E9AA0"></div>青蓝点缀</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>服饰与道具</h3>
+          <ul>
+            <li>束发 + 浅刻甲骨纹发冠；宽袖交领长袍</li>
+            <li>青铜玉佩与小型甲骨简牍悬于腰间</li>
+            <li>手持骨质刻痕“甲骨文数字档案牌”</li>
+            <li>克制全息字体、粒子、扫描线与 HUD</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="note">
+      说明：本页原图为 AI 概念设定参考，不代表最终 3D 模型或正式上线数字人形象。
+      图内不写入任何可读文字/品牌名；中文标题仅存在于本排版层，避免 AI 生成错字。
+    </div>
+    <footer>
+      <span>殷契拾文——AI 甲骨文识别与学习研究平台 · 甲骨文数字史官 Concept Sheet v0.1</span>
+      <span>docs/character/digital-scholar · 离线展示</span>
+    </footer>
+  </div>
+
+  <script>
+    const views = [
+      ['01-front-full.png', 'Front', '正面全身', '2 / 3', '讲解手势 + 托持档案牌'],
+      ['02-45-full.png', '45°', '45° 全身', '2 / 3', '袍服层次与站姿'],
+      ['03-side-full.png', 'Side', '侧面全身', '2 / 3', '冠髻、宽袖与腰饰轮廓'],
+      ['04-back-full.png', 'Back', '背面全身', '2 / 3', '发冠背面、袍服与简牍'],
+      ['05-half-portrait.png', 'Portrait', '半身肖像', '2 / 3', '学者肖像与神情'],
+      ['06-tablet-closeup.png', 'Archive Tablet', '持牌特写', '2 / 3', '甲骨档案牌与扫描线'],
+      ['07-lecture-scene.png', 'Lecture', '讲解场景', '3 / 2', '未来甲骨研究空间'],
+      ['08-expressions.png', 'Expressions', '表情展示', '3 / 2', '讲解专注 / 温和颔首']
+    ]
+    const grid = document.getElementById('view-grid')
+    let done = 0
+    views.forEach(([file, en, cn, ratio, desc]) => {
+      const card = document.createElement('div')
+      card.className = 'card'
+      card.innerHTML = `
+        <div class="stage ${ratio === '3 / 2' ? 'wide' : ''}">
+          <div class="ph">${cn}<span>${file}</span></div>
+          <img src="render/${file}" alt="${cn} · ${desc}" loading="lazy" />
+        </div>
+        <div class="cap">
+          <span><span class="en">${en}</span> · <span class="cn">${cn}</span></span>
+          <span class="badge">待生成</span>
+        </div>`
+      const img = card.querySelector('img')
+      const badge = card.querySelector('.badge')
+      img.onload = () => {
+        card.classList.remove('missing')
+        badge.textContent = '已生成'
+        done += 1
+        document.getElementById('done-count').textContent = done
+      }
+      img.onerror = () => card.classList.add('missing')
+      grid.appendChild(card)
+    })
+  </script>
+</body>
+</html>

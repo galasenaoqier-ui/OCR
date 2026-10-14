@@ -1,0 +1,24 @@
+{
+  "name": "Yinqi_Ochre_Amber",
+  "color": {
+    "paper": { "$type": "color", "$value": "#F3EDE3" },
+    "paperLight": { "$type": "color", "$value": "#FBF6EC" },
+    "parchment": { "$type": "color", "$value": "#EADFCC" },
+    "paperSoft": { "$type": "color", "$value": "#E0D3BC" },
+    "mist": { "$type": "color", "$value": "#F1E7D8" },
+    "mistSoft": { "$type": "color", "$value": "#F9F3E8" },
+    "amber": { "$type": "color", "$value": "#C28A3D" },
+    "ochre": { "$type": "color", "$value": "#9E5B34" },
+    "ink": { "$type": "color", "$value": "#2B211A" },
+    "inkSoft": { "$type": "color", "$value": "#4A3C30" },
+    "muted": { "$type": "color", "$value": "#7B6C59" },
+    "bone": { "$type": "color", "$value": "#FBF5EA" },
+    "soot": { "$type": "color", "$value": "#2E231B" },
+    "sootSoft": { "$type": "color", "$value": "#4A3A2A" },
+    "goldLight": { "$type": "color", "$value": "#D9B070" },
+    "line": { "$type": "color", "$value": "#D8CCB4" },
+    "seal": { "$type": "color", "$value": "#A95638" },
+    "green": { "$type": "color", "$value": "#6F7C54" },
+    "amberSoft": { "$type": "color", "$value": "#9C6B2F" }
+  }
+}

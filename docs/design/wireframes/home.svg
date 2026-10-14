@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1180" viewBox="0 0 1440 1180">
+  <rect width="1440" height="1180" fill="#F4F0E6"/>
+  <text x="80" y="76" font-family="KaiTi,serif" font-size="22" fill="#8B7355">殷契智识</text>
+  <g font-family="Microsoft YaHei" font-size="14" fill="#171614">
+    <text x="420" y="74">首页</text><text x="490" y="74">AI识甲</text><text x="570" y="74">甲骨字库</text><text x="660" y="74">字形演变</text>
+    <text x="750" y="74">甲骨知识</text><text x="840" y="74">研究档案</text><text x="930" y="74">实践成果</text>
+    <text x="1190" y="74">答辩Demo</text><text x="1310" y="74">开始识别</text>
+  </g>
+  <text x="80" y="300" font-family="KaiTi,serif" font-size="78" fill="#171614">让三千年前的文字，</text>
+  <text x="80" y="395" font-family="KaiTi,serif" font-size="78" fill="#171614">再次被看见。</text>
+  <rect x="80" y="470" width="300" height="52" rx="26" fill="#171614"/>
+  <rect x="400" y="470" width="300" height="52" rx="26" fill="none" stroke="#8B7355"/>
+  <text x="230" y="503" font-family="Microsoft YaHei" font-size="18" fill="#F4F0E6" text-anchor="middle">开始识甲</text>
+  <text x="550" y="503" font-family="Microsoft YaHei" font-size="18" fill="#171614" text-anchor="middle">探索甲骨字库</text>
+  <rect x="760" y="180" width="580" height="520" rx="16" fill="#E9E0CD" stroke="#8B7355"/>
+  <text x="900" y="470" font-family="KaiTi,serif" font-size="130" fill="#332A22" text-anchor="middle" opacity="0.8">马</text>
+  <rect x="1140" y="210" width="170" height="100" fill="#FBF8F0" stroke="#B49765"/>
+  <text x="1158" y="244" font-family="Microsoft YaHei" font-size="11" fill="#171614">AI DETECTED</text>
+  <text x="1158" y="278" font-family="KaiTi,serif" font-size="30" fill="#171614">马</text>
+  <text x="1158" y="298" font-family="Microsoft YaHei" font-size="10" fill="#5B5145">96.8% HIGH CONFIDENCE</text>
+  <text x="860" y="770" font-family="Microsoft YaHei" font-size="15" fill="#5B5145">从一块甲骨，到一个汉字——用 AI 重新打开三千年前的文字世界。</text>
+</svg>

@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 920" role="img" aria-label="甲骨文数字史官 正面全身概念矢量稿">
+  <defs>
+    <linearGradient id="frontBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1514"/>
+      <stop offset="0.55" stop-color="#172321"/>
+      <stop offset="1" stop-color="#0d1312"/>
+    </linearGradient>
+    <radialGradient id="frontGlow" cx="0.5" cy="0.42" r="0.62">
+      <stop offset="0" stop-color="#d9bc8d" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#d9bc8d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="robeFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2b1e"/>
+      <stop offset="0.45" stop-color="#2b2015"/>
+      <stop offset="1" stop-color="#1c130c"/>
+    </linearGradient>
+    <linearGradient id="robeInner" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b4732"/>
+      <stop offset="1" stop-color="#3d2e1f"/>
+    </linearGradient>
+    <linearGradient id="skinFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efc6a0"/>
+      <stop offset="1" stop-color="#ca8f63"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="520" height="920" fill="url(#frontBg)"/>
+  <circle cx="260" cy="470" r="250" fill="url(#frontGlow)"/>
+  <circle cx="260" cy="470" r="246" fill="none" stroke="#b99656" stroke-opacity="0.08"/>
+  <circle cx="260" cy="470" r="258" fill="none" stroke="#b99656" stroke-opacity="0.05" stroke-dasharray="1 10"/>
+
+  <!-- 背景甲骨象形淡纹：日/月/雨/山 -->
+  <g fill="none" stroke="#c7a76c" stroke-opacity="0.12" stroke-width="2.2" stroke-linecap="round">
+    <g transform="translate(72 138) scale(1.6)">
+      <circle r="9" /><circle r="2" fill="#c7a76c" /><path d="M0 -14 V -20 M14 0 H20 M0 14 V20 M-14 0 H-20" stroke-opacity="0.8"/>
+    </g>
+    <g transform="translate(400 120) scale(1.5)">
+      <path d="M10 0 A10 10 0 1 0 10 -18 M8 -2 A8 8 0 0 1 8 -14" />
+    </g>
+    <g transform="translate(96 790) scale(1.6)">
+      <path d="M0 14 L10 0 L20 14 M-10 8 L-4 0 L4 8" />
+    </g>
+    <g transform="translate(398 790) scale(1.5)">
+      <path d="M0 10 H22 M4 -2 V10 M11 -5 V10 M18 -2 V10" />
+    </g>
+  </g>
+
+  <!-- 地面投影 -->
+  <ellipse cx="260" cy="898" rx="185" ry="16" fill="#000" opacity="0.3"/>
+
+  <g id="scholar">
+    <!-- 外袍 -->
+    <path d="M150 930 C152 640 184 470 212 380 L260 360 L308 380 C336 470 368 640 370 930 Z" fill="url(#robeFront)"/>
+
+    <!-- 袍面层次与衣褶 -->
+    <path d="M190 930 C198 700 224 560 260 520 C296 560 322 700 330 930 L282 930 L260 600 L238 930 Z" fill="#241a12" opacity="0.55"/>
+    <path d="M164 470 C178 560 196 680 206 930" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="2"/>
+    <path d="M356 470 C342 560 324 680 314 930" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="2"/>
+
+    <!-- 中缝内衬 -->
+    <path d="M260 388 L214 700 L306 700 Z" fill="url(#robeInner)"/>
+    <path d="M260 394 L226 700 M260 394 L294 700" fill="none" stroke="#b99656" stroke-opacity="0.55" stroke-width="2"/>
+    <path d="M260 384 L260 700" fill="none" stroke="#d9bc8d" stroke-opacity="0.25" stroke-width="1"/>
+
+    <!-- 宽袖 -->
+    <path d="M156 440 C112 500 92 620 112 700 L150 706 C136 626 146 516 190 452 Z" fill="#241a12" opacity="0.8"/>
+    <path d="M364 440 C408 500 428 620 408 700 L370 706 C384 626 374 516 330 452 Z" fill="#241a12" opacity="0.8"/>
+    <path d="M160 436 C118 500 100 610 112 690" fill="none" stroke="#b99656" stroke-opacity="0.18" stroke-width="2"/>
+    <path d="M360 436 C402 500 420 610 408 690" fill="none" stroke="#b99656" stroke-opacity="0.18" stroke-width="2"/>
+
+    <!-- 束腰 -->
+    <path d="M182 626 H338 L346 660 H174 Z" fill="#17100b" stroke="#b99656" stroke-opacity="0.4" stroke-width="1.4"/>
+    <rect x="236" y="618" width="48" height="48" rx="7" fill="#8a6b3c"/>
+    <rect x="246" y="628" width="28" height="28" rx="4" fill="#17100b" stroke="#d9bc8d" stroke-opacity="0.7"/>
+    <path d="M256 644 h8 M260 640 v8" stroke="#d9bc8d" stroke-width="1.6"/>
+
+    <!-- 腰间青铜玉佩与甲骨简牍 -->
+    <circle cx="352" cy="690" r="12" fill="none" stroke="#9c8a67" stroke-width="3"/>
+    <circle cx="352" cy="690" r="5" fill="none" stroke="#d9bc8d" stroke-opacity="0.55"/>
+    <path d="M352 676 V 664 H 338 V 648" fill="none" stroke="#9c8a67" stroke-width="2.5"/>
+    <rect x="196" y="672" width="26" height="92" rx="4" fill="#e4d9be" opacity="0.9"/>
+    <g fill="none" stroke="#5b4630" stroke-width="2">
+      <path d="M205 684 h8 M205 700 v6 M205 716 h8 M205 734 v6 M209 694 v12" />
+    </g>
+    <path d="M209 662 H196 M196 662 V672 M209 662 V648" fill="none" stroke="#8a6b3c" stroke-width="2"/>
+
+    <!-- 双手：左托牌、右讲解 -->
+    <ellipse cx="146" cy="716" rx="15" ry="11" fill="url(#skinFront)" transform="rotate(14 146 716)"/>
+    <ellipse cx="382" cy="612" rx="16" ry="13" fill="url(#skinFront)" transform="rotate(-18 382 612)"/>
+    <path d="M400 590 Q390 578 374 582 M404 622 Q398 634 386 638" fill="none" stroke="#8f5f3c" stroke-width="2.4" opacity="0.6"/>
+
+    <!-- 手持甲骨数字档案牌 -->
+    <g transform="rotate(-3 112 700)">
+      <rect x="96" y="568" width="118" height="230" rx="12" fill="#d7c7a4"/>
+      <rect x="102" y="574" width="106" height="218" rx="8" fill="none" stroke="#7b6240" stroke-width="1.5" opacity="0.5"/>
+      <path d="M104 700 Q155 662 206 700" fill="none" stroke="#a58b60" stroke-width="1.2" opacity="0.5"/>
+      <g fill="none" stroke="#6b5134" stroke-width="3" stroke-linecap="round">
+        <path d="M118 612 l16 -14 -2 20 18 -15 M122 664 l10 8 -8 14 16 -6 M152 592 l8 8 M148 630 l20 -10 M132 746 l18 -12 M164 748 l10 -16"/>
+      </g>
+      <path d="M112 604 h10 M112 620 h16 M112 636 h8" fill="none" stroke="#d9bc8d" stroke-opacity="0.9" stroke-width="2"/>
+    </g>
+    <!-- 档案牌扫描线 -->
+    <path d="M104 690 H206" stroke="#7fb5b0" stroke-opacity="0.55" stroke-width="1.6" stroke-dasharray="8 5"/>
+
+    <!-- 头部与颈部 -->
+    <path d="M234 260 L286 260 L292 360 L228 360 Z" fill="#c28d61"/>
+    <path d="M234 330 Q260 348 286 330 L286 360 Q260 372 234 360 Z" fill="#241a12"/>
+    <g id="head">
+      <!-- 后发与大髻 -->
+      <path d="M176 300 C162 210 204 142 260 142 C316 142 358 210 344 300 L348 340 L172 340 Z" fill="#1d130d"/>
+      <ellipse cx="260" cy="104" rx="34" ry="25" fill="#1d130d"/>
+      <path d="M214 120 L310 96" stroke="#b99656" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+      <!-- 面部 -->
+      <ellipse cx="260" cy="250" rx="47" ry="66" fill="url(#skinFront)"/>
+      <path d="M220 296 Q260 328 300 296 Q260 342 220 296 Z" fill="#b67d50" opacity="0.16"/>
+      <!-- 前发 -->
+      <path d="M218 258 C210 220 234 182 260 182 C286 182 310 220 302 258 C290 226 274 214 260 214 C246 214 230 226 218 258 Z" fill="#1d130d"/>
+      <!-- 眉 -->
+      <path d="M222 270 Q236 264 251 269 M269 269 Q284 264 298 270" fill="none" stroke="#2b160e" stroke-width="4" stroke-linecap="round"/>
+      <!-- 眼 -->
+      <ellipse cx="236" cy="282" rx="11" ry="7" fill="#f7f0e2"/>
+      <circle cx="240" cy="283" r="4.8" fill="#33211a"/><circle cx="241" cy="281" r="1.4" fill="#fff8e8"/>
+      <ellipse cx="284" cy="282" rx="11" ry="7" fill="#f7f0e2"/>
+      <circle cx="280" cy="283" r="4.8" fill="#33211a"/><circle cx="279" cy="281" r="1.4" fill="#fff8e8"/>
+      <path d="M222 276 Q236 271 250 276 M270 276 Q284 271 298 276" fill="none" stroke="#8f5f3c" stroke-width="1.6" opacity="0.6"/>
+      <!-- 鼻与唇 -->
+      <path d="M260 292 C259 304 256 310 252 315" fill="none" stroke="#a96f45" stroke-width="2.2" stroke-linecap="round" opacity="0.6"/>
+      <path d="M247 304 Q260 311 273 304" fill="none" stroke="#a54a32" stroke-width="3" stroke-linecap="round"/>
+      <path d="M251 310 Q260 315 269 310" fill="none" stroke="#b25e43" stroke-width="1.4" opacity="0.5"/>
+    </g>
+
+    <!-- 领缘与肩线 -->
+    <path d="M192 368 Q260 344 328 368" fill="none" stroke="#b99656" stroke-opacity="0.55" stroke-width="2"/>
+    <path d="M240 356 Q260 370 280 356 L280 400 L240 400 Z" fill="#241a12"/>
+
+    <!-- 漂浮甲骨字符与克制全息线 -->
+    <g fill="none" stroke="#7fb5b0" stroke-opacity="0.55" stroke-width="1.6">
+      <path d="M426 306 l8 -8 -2 10 10 -7 M416 350 h12 M418 384 l10 8 -8 12"/>
+      <circle cx="442" cy="330" r="1.3" fill="#7fb5b0"/>
+      <path d="M86 392 l7 -7 -2 8 9 -6 M78 430 h10 M82 458 l8 6 -7 10"/>
+    </g>
+    <path d="M390 560 H455" stroke="#7fb5b0" stroke-opacity="0.18" stroke-width="1"/>
+    <path d="M74 560 H138" stroke="#7fb5b0" stroke-opacity="0.18" stroke-width="1"/>
+  </g>
+</svg>

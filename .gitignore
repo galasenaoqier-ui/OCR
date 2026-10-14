@@ -1,0 +1,16 @@
+node_modules
+dist
+.vite
+*.local
+*.log
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+userdata
+__pycache__
+tools/cloudflared.exe
+.edge-qa
+*-qa.stdout.log
+*-qa.stderr.log
+docs/qa/*.png
+**/.edge-profile/

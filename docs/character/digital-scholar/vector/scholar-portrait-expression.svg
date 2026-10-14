@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-label="甲骨文数字史官 半身肖像与表情矢量稿">
+  <defs>
+    <linearGradient id="exprBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1413"/>
+      <stop offset="1" stop-color="#1a2622"/>
+    </linearGradient>
+    <radialGradient id="exprSkin" cx="0.5" cy="0.38" r="0.7">
+      <stop offset="0" stop-color="#eec39c"/>
+      <stop offset="1" stop-color="#c98d61"/>
+    </radialGradient>
+  </defs>
+  <rect width="520" height="360" fill="url(#exprBg)"/>
+
+  <!-- 左：沉静专注 -->
+  <g transform="translate(148 196)">
+    <ellipse cy="78" rx="72" ry="76" fill="#1d130d"/>
+    <path d="M-34 0 C-44 -64 -12 -104 0 -104 C12 -104 44 -64 34 0 L34 34 L-34 34 Z" fill="#1d130d"/>
+    <ellipse cy="-34" rx="12" ry="16" fill="#1d130d"/>
+    <path d="M-56 -26 L52 -42" stroke="#b99656" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cy="0" rx="50" ry="72" fill="url(#exprSkin)"/>
+    <path d="M-54 -28 C-50 -52 -34 -72 0 -72 C34 -72 50 -52 54 -28 C42 -48 24 -58 0 -58 C-24 -58 -42 -48 -54 -28 Z" fill="#1d130d"/>
+    <path d="M-38 10 Q-22 4 -8 9 M8 9 Q22 4 38 10" stroke="#2b160e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="-18" cy="26" rx="10" ry="6.5" fill="#f7f0e2"/>
+    <circle cx="-15" cy="27" r="4.4" fill="#33211a"/><circle cx="-14" cy="25" r="1.3" fill="#fff8e8"/>
+    <ellipse cx="18" cy="26" rx="10" ry="6.5" fill="#f7f0e2"/>
+    <circle cx="15" cy="27" r="4.4" fill="#33211a"/><circle cx="16" cy="25" r="1.3" fill="#fff8e8"/>
+    <path d="M0 38 C-1 49 -4 55 -8 58" stroke="#a96f45" stroke-width="2" opacity="0.55" fill="none"/>
+    <path d="M-14 62 Q0 70 14 62" stroke="#a54a32" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M-58 76 Q0 108 58 76 L66 132 L-66 132 Z" fill="#3a2b1e"/>
+    <path d="M-56 82 Q0 106 56 82" stroke="#b99656" stroke-width="2" opacity="0.5" fill="none"/>
+  </g>
+
+  <!-- 右：温和颔首讲解 -->
+  <g transform="translate(374 202) rotate(-4 0 96)">
+    <ellipse cy="72" rx="68" ry="72" fill="#1d130d"/>
+    <path d="M-32 -2 C-40 -62 -10 -100 0 -100 C10 -100 40 -62 32 -2 L32 30 L-32 30 Z" fill="#1d130d"/>
+    <ellipse cy="-36" rx="11" ry="15" fill="#1d130d"/>
+    <path d="M-54 -28 L48 -42" stroke="#b99656" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cy="-4" rx="48" ry="70" fill="url(#exprSkin)"/>
+    <path d="M-52 -30 C-48 -54 -32 -74 0 -74 C32 -74 48 -54 52 -30 C40 -50 22 -60 0 -60 C-22 -60 -40 -50 -52 -30 Z" fill="#1d130d"/>
+    <path d="M-38 8 Q-22 2 -8 7 M8 7 Q22 2 38 8" stroke="#2b160e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- 闭眼微笑 -->
+    <path d="M-27 22 Q-18 28 -9 22" stroke="#3a2015" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M9 22 Q18 28 27 22" stroke="#3a2015" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <path d="M0 34 C-1 45 -4 51 -8 55" stroke="#a96f45" stroke-width="2" opacity="0.5" fill="none"/>
+    <path d="M-13 60 Q0 68 13 60" stroke="#a54a32" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M-57 74 Q0 106 57 74 L65 132 L-65 132 Z" fill="#3a2b1e"/>
+    <path d="M-55 80 Q0 104 55 80" stroke="#b99656" stroke-width="2" opacity="0.5" fill="none"/>
+  </g>
+
+  <path d="M260 40 V 320" stroke="#b99656" stroke-opacity="0.25" stroke-dasharray="2 9"/>
+</svg>

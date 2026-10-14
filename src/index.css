@@ -1,0 +1,429 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* v6 甲骨光影 · 赭石琥珀 Design Tokens（唯一色源） */
+  --paper: #f3ede3;
+  --paper-rgb: 243 237 227;
+  --paperLight: #fbf6ec;
+  --paperLight-rgb: 251 246 236;
+  --parchment: #eadfcc;
+  --parchment-rgb: 234 223 204;
+  --paperSoft: #e0d3bc;
+  --paperSoft-rgb: 224 211 188;
+  --mist: #f1e7d8;
+  --mist-rgb: 241 231 216;
+  --mistSoft: #f9f3e8;
+  --mistSoft-rgb: 249 243 232;
+  --jade: #c28a3d;
+  --jade-rgb: 194 138 61;
+  --jadeDeep: #9e5b34;
+  --jadeDeep-rgb: 158 91 52;
+  --ink: #2b211a;
+  --ink-rgb: 43 33 26;
+  --inkSoft: #4a3c30;
+  --inkSoft-rgb: 74 60 48;
+  --muted: #7b6c59;
+  --muted-rgb: 123 108 89;
+  --bone: #fbf5ea;
+  --bone-rgb: 251 245 234;
+  --bronze: #9e5b34;
+  --bronze-rgb: 158 91 52;
+  --bronzeDark: #2e231b;
+  --bronzeDark-rgb: 46 35 27;
+  --gold: #c28a3d;
+  --gold-rgb: 194 138 61;
+  --goldLight: #d9b070;
+  --goldLight-rgb: 217 176 112;
+  --line: #d8ccb4;
+  --line-rgb: 216 204 180;
+  --soot: #2e231b;
+  --soot-rgb: 46 35 27;
+  --sootSoft: #4a3a2a;
+  --sootSoft-rgb: 74 58 42;
+  --green: #6f7c54;
+  --green-rgb: 111 124 84;
+  --amber: #9c6b2f;
+  --amber-rgb: 156 107 47;
+  --seal: #a95638;
+  --seal-rgb: 169 86 56;
+  --sealDark: #7c3626;
+  --sealDark-rgb: 124 54 38;
+  --shadow-card: 0 1px 2px rgba(46, 35, 27, 0.05), 0 10px 26px -18px rgba(158, 91, 52, 0.18);
+  --shadow-lift: 0 2px 4px rgba(46, 35, 27, 0.05), 0 18px 40px -24px rgba(158, 91, 52, 0.28);
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-yahei antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 52% at 14% -6%, rgba(251, 246, 236, 0.95), transparent),
+    radial-gradient(ellipse 72% 56% at 100% 10%, rgba(241, 231, 216, 0.8), transparent);
+  background-size: 100% 100%, 100% 100%;
+  background-attachment: fixed;
+}
+
+html,
+body,
+#root {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+/* 全局极淡风化骨纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("/decor/plastron.svg");
+  background-repeat: no-repeat;
+  background-position: right -130px bottom 40px;
+  background-size: min(44vw, 540px) auto;
+}
+
+::selection {
+  background: rgba(194, 138, 61, 0.28);
+}
+
+@layer components {
+  .hairline {
+    @apply border-line;
+  }
+  .panel {
+    @apply bg-paperLight border border-line rounded-xl shadow-card;
+  }
+  .font-song {
+    font-family: "Songti SC", STSong, SimSun, "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  }
+  .eyebrow {
+    @apply text-xs tracking-[0.22em] uppercase;
+    color: var(--jadeDeep);
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-soot px-6 py-3 text-sm tracking-wide text-bone transition duration-200 hover:-translate-y-px hover:bg-bronze hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-goldLight disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-jadeDeep px-6 py-2.5 text-sm text-bone transition duration-200 hover:-translate-y-px hover:bg-jade hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-goldLight disabled:opacity-40;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border bg-transparent px-7 py-3 text-sm transition duration-200 hover:-translate-y-px hover:bg-paperSoft/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-goldLight;
+    border-color: #b08a5d;
+    color: #4a3c30;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-md border border-line bg-paperLight px-3.5 py-1.5 text-xs text-muted transition hover:border-bronze hover:text-ink cursor-pointer;
+  }
+  .chip-active {
+    @apply border-bronze bg-bronzeDark text-bone hover:text-bone;
+  }
+  .input-base {
+    @apply w-full rounded-lg border border-line bg-paperLight px-4 py-3 text-sm text-ink outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25;
+  }
+  .stat-num {
+    @apply font-song text-4xl tracking-wide;
+  }
+}
+
+.paper-grain {
+  position: relative;
+}
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(46, 35, 27, 0.016) 0,
+      rgba(46, 35, 27, 0.016) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  border-radius: inherit;
+}
+
+/* 风化骨面 wash 区 */
+.rubbing-dark {
+  position: relative;
+  color: #2b211a;
+  background:
+    radial-gradient(ellipse 72% 56% at 12% -8%, rgba(251, 246, 236, 0.92), transparent 55%),
+    radial-gradient(ellipse 66% 52% at 100% 10%, rgba(217, 176, 112, 0.2), transparent 60%),
+    linear-gradient(135deg, #f4ede0 0%, #ece0cb 52%, #f1e7d5 100%);
+  border: 1px solid rgba(216, 204, 180, 0.9);
+}
+.rubbing-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: url("/decor/carapace-grid.svg");
+  background-repeat: no-repeat;
+  background-position: right -70px top -30px;
+  background-size: min(36vw, 460px) auto;
+}
+.rubbing-dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.24;
+  mix-blend-mode: normal;
+  background-image:
+    repeating-linear-gradient(112deg, rgba(158, 91, 52, 0.045) 0 1px, transparent 1px 7px),
+    radial-gradient(rgba(194, 138, 61, 0.08) 0.6px, transparent 1px);
+  background-size: auto, 15px 15px;
+}
+
+.rubbing-dark > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 暖骨宣纸卡 */
+.parchment-card {
+  position: relative;
+  @apply rounded-xl border border-line bg-parchment text-ink shadow-card;
+}
+.parchment-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  border-radius: inherit;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(46, 35, 27, 0.013) 0,
+    rgba(46, 35, 27, 0.013) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+.parchment-card > * {
+  position: relative;
+}
+
+/* 朱砂印章（仅点睛） */
+.seal-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border: 1px solid rgba(251, 245, 234, 0.62);
+  border-radius: 0.375rem;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.13), transparent 36%),
+    #a95638;
+  color: #fbf5ea;
+  font-family: KaiTi, STKaiti, "楷体", serif;
+  letter-spacing: 0.08em;
+  box-shadow:
+    inset 0 0 0 2px rgba(124, 54, 38, 0.45),
+    0 1px 3px rgba(46, 35, 27, 0.2);
+}
+
+/* 细分隔线 */
+.oracle-crack {
+  height: 0;
+  border: 0;
+  border-top: 1px solid rgba(158, 91, 52, 0.32);
+  background-image: linear-gradient(90deg, rgba(194, 138, 61, 0.55) 0 4px, transparent 4px 9px);
+  background-repeat: repeat-x;
+  background-size: 9px 1px;
+  opacity: 0.72;
+}
+
+/* 图版轻微做旧但保持辨识 */
+.sepia-rubbing {
+  filter: sepia(0.14) contrast(1.02) saturate(0.98);
+}
+
+/* 卡片外侧小角标 */
+.turtle-corner-fragment,
+.turtle-corner-omen {
+  position: relative;
+}
+.turtle-corner-fragment::after,
+.turtle-corner-omen::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 62px;
+  height: 62px;
+  pointer-events: none;
+  opacity: 0.11;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.turtle-corner-fragment::after {
+  background-image: url("/decor/shell-fragment.svg");
+}
+.turtle-corner-omen::after {
+  background-image: url("/decor/omen-mark.svg");
+  width: 46px;
+  height: 46px;
+  opacity: 0.12;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(194, 138, 61, 0.5);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  main {
+    padding-bottom: 4.5rem;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+
+  button,
+  .btn-primary,
+  .btn-gold,
+  .btn-ghost,
+  .chip,
+  .input-base {
+    min-height: 44px;
+  }
+
+  .mobile-bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 45;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-height: 64px;
+    padding: 7px 10px calc(7px + env(safe-area-inset-bottom));
+    border-top: 1px solid rgba(216, 204, 180, 0.92);
+    background: rgba(251, 246, 236, 0.97);
+    box-shadow: 0 -8px 24px rgba(46, 35, 27, 0.08);
+    backdrop-filter: blur(12px);
+  }
+
+  .mobile-bottom-link {
+    display: flex;
+    min-height: 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    border-radius: 10px;
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .mobile-bottom-link span {
+    font-family: "Songti SC", STSong, SimSun, serif;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .mobile-bottom-link small {
+    font-size: 10px;
+  }
+
+  .mobile-bottom-link.is-active {
+    color: var(--jadeDeep);
+    background: rgba(224, 211, 188, 0.5);
+  }
+
+  .mobile-bottom-link.is-active span {
+    color: var(--bronze);
+  }
+
+  .panel,
+  .rubbing-dark,
+  .parchment-card {
+    max-width: 100%;
+  }
+
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 430px) {
+  .font-song.text-4xl,
+  h1.text-4xl {
+    font-size: 2rem;
+  }
+
+  .page-shell {
+    padding-inline: 1rem;
+  }
+
+  .rubbing-dark {
+    border-radius: 14px;
+    padding: 1.25rem;
+  }
+
+  .rubbing-dark h1 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .page-shell > .rubbing-dark {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .page-shell > .rubbing-dark h1 {
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
+    line-height: 1.18;
+    overflow-wrap: anywhere;
+  }
+
+  .page-shell > .rubbing-dark p {
+    font-size: 0.8125rem;
+    line-height: 1.7;
+  }
+
+  .mobile-stack-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 639px) {
+  .mobile-tight-panel {
+    padding: 1rem;
+  }
+}

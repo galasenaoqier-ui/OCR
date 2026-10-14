@@ -1,0 +1,3 @@
+import { ScrollView, Text, View } from 'react-native'
+import { colors, globalStyles, spacing } from '../theme'
+export function PlaceholderScreen({ title, detail }: { title: string; detail: string }) { return <ScrollView style={globalStyles.screen} contentContainerStyle={{ padding: spacing.lg, gap: spacing.lg }}><Text style={globalStyles.title}>{title}</Text><View style={[globalStyles.card, { backgroundColor: colors.paperDark }]}><Text style={globalStyles.subtitle}>{detail}</Text><Text style={[globalStyles.subtitle, { marginTop: spacing.md }]}>移动端导航和品牌主题已就绪，完整业务页将沿用共享数据与 Native adapter 接口接入。</Text></View></ScrollView> }

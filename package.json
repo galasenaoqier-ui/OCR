@@ -1,0 +1,49 @@
+{
+  "name": "yinqi-platform",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "「殷契拾文」基于OCR技术的甲骨文拓片文字智能识别与检索系统",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "postbuild": "node scripts/prepare-github-pages.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "data:export": "node scripts/export-glyphs.mjs",
+    "data:import-obc": "node scripts/import-hust-obc.mjs",
+    "data:import-evo": "node scripts/import-evo.mjs",
+    "cover:export": "node scripts/export-cover.mjs",
+    "h5:preview": "vite preview --host 0.0.0.0 --port 4173",
+    "h5:qr": "node scripts/generate-qr.mjs",
+    "h5:share": "node scripts/h5-share.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.10",
+    "d3": "^7.9.0",
+    "echarts": "^5.5.1",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.454.0",
+    "onnxruntime-web": "^1.29.0",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}

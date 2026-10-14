@@ -18,6 +18,7 @@ import DemoPage from './pages/DemoPage'
 import StatusPage from './pages/StatusPage'
 import HustPage from './pages/HustPage'
 import SharePage from './pages/SharePage'
+import LogoMotionLoader from './components/LogoMotionLoader'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -31,6 +32,7 @@ export default function App() {
   return (
     <HashRouter>
       <ScrollToTop />
+      <LogoMotionLoader />
       <div className="relative z-10 flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1 pt-16">

@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* The standalone pixel2motion HTML is reused as a lightweight first-visit brand reveal. */
+.logo-motion-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: #f8f5e6;
+  animation: logo-motion-loader-in 180ms ease-out both;
+}
+.logo-motion-loader__frame {
+  width: min(100vw, 760px);
+  height: min(100vh, 760px);
+  border: 0;
+  background: #f8f5e6;
+}
+.logo-motion-loader__skip {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #d3c5ad;
+  border-radius: 999px;
+  color: #51473a;
+  background: rgba(243, 235, 221, .94);
+  font-size: 12px;
+  cursor: pointer;
+}
+@keyframes logo-motion-loader-in { from { opacity: 0 } to { opacity: 1 } }
+@media (prefers-reduced-motion: reduce) { .logo-motion-loader { display: none } }
+
 :root {
   /* v6 甲骨光影 · 赭石琥珀 Design Tokens（唯一色源） */
   --paper: #f3ede3;
